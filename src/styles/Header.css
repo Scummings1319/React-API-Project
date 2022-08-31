@@ -1,0 +1,60 @@
+.Header {
+  background-color: #e8b0af;
+  border-bottom: 0.5px solid #e0aead;
+  box-shadow: 0px 0px 5px #e2686b;
+  margin-bottom: 15px;
+  height: 60px;
+  width: 100vw;
+  text-shadow: 3px 3px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Header .title {
+  color: #f2ebec;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: "Patrick Hand", cursive;
+}
+
+#seedling {
+  width: 45px;
+  padding-right: 10px;
+}
+.navLinks {
+  position: absolute;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  display: flex;
+  width: 100px;
+}
+.houseIcon {
+  width: 40px;
+  padding-right: 10px;
+}
+.navLinks a {
+  text-decoration: none;
+}
+.favButton {
+  font-size: 55px;
+  color: #d14f51;
+  margin-right: 30px;
+}
+.link {
+  padding-bottom: 10px;
+  padding-right: 3px;
+}
+button {
+  background-color: #f4ede5;
+  border: 0.5px solid #5c5c5c;
+  border-radius: 5px;
+}
+button:hover {
+  box-shadow: 0 0 3px #e2686b, 0 0 3px #e2686b;
+}

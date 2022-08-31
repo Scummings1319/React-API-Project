@@ -2,39 +2,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 20px;
 }
-.featuredRecipes {
-  color: #8d9b6a;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #909e84;
-  font-weight: 400;
-  text-align: center;
-}
+
 .recipeItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.recipeItems img {
-  width: 200px;
-  margin-bottom: 10px;
-}
-
-
 @media screen and (min-width: 1300px) {
-  .recipeItems{
-
-    display: grid; 
+  .recipeItems {
+    display: grid;
     /* grid-template-columns: 1fr 3fr; */
     justify-content: space-around;
     align-content: space-around;
     grid-template-columns: 10px 10px auto;
     grid-template-rows: auto auto;
-    grid-gap: 10px;  
+    grid-gap: 10px;
     width: flex;
     padding: 20px 20px 20px;
     /* column-gap: 20px;
     row-gap: 20px; */
   }
-  }
+}

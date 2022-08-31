@@ -1,0 +1,20 @@
+.filterSection {
+  color: #515a5f;
+  margin-top: 30px;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.calorieBar {
+  width: 60px;
+}
+.submit-btn {
+  background-color: #f4ede5;
+  border: 0.5px solid #5c5c5c;
+  border-radius: 5px;
+}
+.submit-btn:hover {
+  box-shadow: 0 0 3px #e2686b, 0 0 3px #e2686b;
+}

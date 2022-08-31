@@ -1,0 +1,66 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100% vw;
+  margin: 20px 0px 0px 0px;
+  background-color: #e8b0af;
+  border-bottom: 0.5px solid #e0aead;
+  box-shadow: 0px 0px 5px #e2686b;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.Footer i {
+  color: white;
+  background-color: #e8b0af;
+  font-size: 20px;
+}
+
+.Footer .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6px;
+}
+
+.Footer #emailInput {
+  background: white;
+  color: #f2ebec;
+  border: none;
+  border-radius: 30px;
+  width: 150px;
+}
+.Footer label {
+  color: #f2ebec;
+  text-shadow: 0px 0px 5px #e2686b;
+}
+
+.Footer button {
+  background-color: #e0aead;
+  color: #f1f1f1;
+  box-shadow: 0 0 20px #e2686b;
+  border: 0.75px solid #fffff2;
+  border-radius: 10px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  width: 90px;
+  height: 23px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.Footer button:hover {
+  box-shadow: 0 0 20px #e2686b, 0 0 25px #e2686b;
+  background-color: #e2686b;
+  color: #020708;
+}
+.Footer .fa-brands {
+  box-shadow: 0 0 20px #e2686b;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 10px;
+}

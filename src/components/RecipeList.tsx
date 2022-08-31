@@ -1,17 +1,23 @@
 import { Recipe } from "../models/id-model";
 import EachRecipe from "./EachRecipe";
-import "./RecipeList.css";
+import "../styles/RecipeList.css";
 interface RecipeListProps {
   mealData: Recipe[];
+  favoritable: boolean;
 }
 
-export default function RecipeList({ mealData }: RecipeListProps) {
+export default function RecipeList({ mealData, favoritable }: RecipeListProps) {
   return (
     <div className="recipelist">
-      <h1 className="featuredRecipes">Featured Recipes</h1>
       <div className="recipeItems">
         {mealData.map((recipe, index) => {
-          return <EachRecipe key={recipe.id} recipe={recipe} />;
+          return (
+            <EachRecipe
+              key={recipe.id}
+              recipe={recipe}
+              favoritable={favoritable}
+            />
+          );
         })}
       </div>
     </div>

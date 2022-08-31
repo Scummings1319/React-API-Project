@@ -5,9 +5,8 @@ import { Recipe } from "../models/id-model";
 import getRecipes, { getRandomRecipes } from "../services/getRecipe";
 import Filters from "./Filters";
 import Header from "./Header";
-import "./HomePage.css";
+import "../styles/HomePage.css";
 import RecipeList from "./RecipeList";
-
 
 export default function HomePage() {
   const [searchInput, setSearchInput] = useState<string>("");
@@ -25,7 +24,6 @@ export default function HomePage() {
   }, []);
 
   function search() {
-    //todo: add calories to this request
     let intolerances = [];
     let diet = "";
     if (filters.dairyfree) {
@@ -74,8 +72,9 @@ export default function HomePage() {
         </button>
       </div>
       <Filters calories={calories} setCalories={setCalories}></Filters>
-      <RecipeList mealData={mealData}></RecipeList>
+      <h1 className="pageTitles">Featured Recipes</h1>
 
+      <RecipeList mealData={mealData} favoritable={true}></RecipeList>
     </div>
   );
 }

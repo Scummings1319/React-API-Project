@@ -1,3 +1,18 @@
+.EachRecipe {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background-color: #bcc99b;
+  border: 0.5px solid #adba8a;
+  box-shadow: 1.5px 1.5px 2px #adba8a;
+  border-radius: 6px;
+  margin: 10px auto;
+  padding: 6px;
+  text-align: center;
+  min-height: 100px;
+}
 .insideBox {
   display: flex;
   flex-direction: column;
@@ -8,116 +23,113 @@
   margin: auto;
 }
 
-.EachRecipe {
-  /* position: relative; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  background-color: #dab6926f;
-  border: 1px solid #75654c;
-  border-radius: 6px;
-  box-shadow: 1px 1px black;
-  margin: 10px auto;
-  padding: 6px;
-  text-align: center;
-  min-height: 350px;
-}
-
-
-.exitButtonRecipe {
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
-  right: 0;
-}
-
-
-
 .EachItem {
   width: 500px;
 }
-
 
 .EachRecipe > .wrapper {
   position: absolute;
   top: 30%;
   left: 30%;
 }
-
+.recipeImage {
+  width: 100%;
+  margin-bottom: 0px;
+  border-radius: 7px;
+  border: 0.3px solid #f4ede5;
+}
 
 .recipeTitle {
+  word-wrap: break-word;
+  margin-top: 0px;
+  margin-bottom: 0;
+  max-width: 90%;
+  color: #562f14;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+}
+.MoreInfoBtn {
+  width: 59px;
+  height: 15px;
+  margin-top: 5px;
+  display: flex;
+  font-size: 10px;
+  text-align: center;
+  background-color: #f4ede5;
+  border: 0.5px solid #f4ede5;
+  border-radius: 5px;
+}
+.MoreInfoBtn:hover {
+  box-shadow: 0 0 10px #e2686b, 0 0 10px #e2686b;
+}
+.recipeInfoTitle {
+  margin-top: 0;
+  margin-bottom: 20px;
   word-wrap: break-word;
   max-width: 100%;
   color: #75654c;
   width: 75%;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
 }
-
-.recipeImage {
-  max-width: 300px;
-}
-
 .RecipeInfo {
-  background-color: rgb(220, 197, 174);
+  background-color: #fff1e8;
+  border: 0.5px solid #8b9e8a;
+  box-shadow: 2px 2px 4px #535b53;
   position: absolute;
   width: 300px;
-  height: 310px;
+  height: 200px;
   margin-left: 90px;
   z-index: 100;
   padding: 5px;
   border-radius: 7px;
   box-shadow: grey 7px 7px 25px;
 }
-
-
-#recipelink {
-  /* width: 260px; */
-  bottom: 190px;
-  
+.recipeParagraph p {
+  margin: 5px;
 }
-
+.recipeParagraph {
+  margin-left: 12px;
+}
+span.bold {
+  font-weight: bold;
+}
 .InsideInfo {
   margin-top: 0px;
   margin-bottom: 15px;
-  position: absolute
+  position: absolute;
 }
 
 .xbtnrecipe {
   width: 50px;
 }
-
+.exitButtonRecipe {
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+}
 #xbtnid {
-  width: 20px;
+  width: 10px;
 }
 
 #xbuttonall {
   position: absolute;
-  left: 261px;
-  top: 14px;
+  left: 280px;
 }
 
 .no {
   display: none;
 }
 
-.recipeInfoTitle {
-  margin-top: 0;
-  word-wrap: break-word;
-  max-width: 100%;
-  color: #75654c;
-  width: 75%;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.moreInfoText {
+/* .moreInfoText {
   padding-top: 15px;
-  
-}
+} */
+
 /* 
 
 @media screen and (min-width: 768px) {

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import "./Heart.css";
+import "../styles/Heart.css";
 import { Recipe } from "../models/id-model";
 import FavoriteContext from "../context/FavoriteContext";
 
@@ -7,16 +7,17 @@ interface RecipeProps {
   recipe: Recipe;
 }
 
-export default function Heart({recipe} : RecipeProps) {
+export default function Heart({ recipe }: RecipeProps) {
   const [selected, setSelected] = useState(false);
-  const {favoriteArray, addFavorite, removeFavorite}=useContext(FavoriteContext)
-  
-  function functionality () {
+  const { favoriteArray, addFavorite, removeFavorite } =
+    useContext(FavoriteContext);
+
+  function functionality() {
     if (selected === true) {
-      setSelected(false)
-      removeFavorite(recipe.id)
+      setSelected(false);
+      removeFavorite(recipe.id);
     } else {
-      setSelected(true)
+      setSelected(true);
     }
   }
 
@@ -26,9 +27,9 @@ export default function Heart({recipe} : RecipeProps) {
         className="heart"
         style={{ backgroundColor: selected ? "red" : "grey" }}
         onClick={() => {
-          addFavorite(recipe)
+          addFavorite(recipe);
           functionality();
-          console.log(favoriteArray)
+          console.log(favoriteArray);
         }}
       >
         <div

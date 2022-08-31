@@ -1,4 +1,4 @@
-import "./Filters.css";
+import "../styles/Filters.css";
 import { useContext, useState } from "react";
 import FavoriteContext from "../context/FavoriteContext";
 
@@ -7,7 +7,7 @@ interface Props {
   setCalories: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export default function Filters({calories, setCalories}: Props) {
+export default function Filters({ calories, setCalories }: Props) {
   const { filters, updateFilter } = useContext(FavoriteContext);
 
   return (
@@ -57,8 +57,13 @@ export default function Filters({calories, setCalories}: Props) {
         }}
       />
       <label htmlFor="shellfishfree">Fish/Shellfish Free</label>
-      <input className="calorieBar" onChange={(e) => setCalories(e.target.valueAsNumber)} id="calories" type="number"/>
-      <label  htmlFor="calories" placeholder="Max Calories">
+      <input
+        className="calorieBar"
+        onChange={(e) => setCalories(e.target.valueAsNumber)}
+        id="calories"
+        type="number"
+      />
+      <label htmlFor="calories" placeholder="Max Calories">
         Calories:{" "}
       </label>
       <button type="submit" className="submit-btn btn" id="submit-btn">

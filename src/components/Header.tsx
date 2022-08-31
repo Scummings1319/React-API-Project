@@ -1,78 +1,18 @@
-import { useContext, useState, useEffect } from "react";
-import FavoriteContext from "../context/FavoriteContext";
-import { Recipe } from "../models/id-model";
-import getInfo from "../services/getInfo";
-import "./Header.css";
+import { Link } from "react-router-dom";
+import "../styles/Header.css";
 
 export default function Header() {
-  // useEffect(() => {
-  //   getInfo(recipe.id).then((data) => {
-  //     if (data) {
-  //       setData(data);
-  //     }
-  //   });
-  // }, []);
-
-  const [showDiv, setShowDiv] = useState(false);
-  const { favoriteArray, removeFavorite } = useContext(FavoriteContext);
-  const [showFavoritesInfo, setShowFavoritesInfoDiv] = useState(false);
   return (
     <div className="Header">
-      
-      <h1>Not Your Mothers Recipes</h1>
-      <button className="favoritesButton" onClick={() => setShowDiv(true)}>
-        <img src="simple-heart-2.svg" />
-      </button>
-      <div className={showDiv ? "favoritePage" : "No"}>
-        <h2 className="favoriteHeader">Favorite Recipes</h2>
-        <button onClick={() => setShowDiv(false)} className="exitButton">
-          <img className="xbtnfav" src="xmark-solid.svg" />
-        </button>
-        {favoriteArray.map((recipe, index) => (
-          <li className="favoritesContent" key={index}>
-            {recipe.title}
-            <img className="displayImage" src={recipe.image}></img>
-            <button
-              onClick={() => {
-                setShowFavoritesInfoDiv(true);
-              }}
-            >
-              Click here for more info
-            </button>
-            <button
-              className="deleteButton"
-              onClick={() => removeFavorite(recipe.id)}
-            >
-              <img src="trash-can-solid.svg" />
-            </button>
-          </li>
-        ))}
-      </div>
-      <div className={showFavoritesInfo ? "RecipeInfoAnother" : "noAnother"}>
-        <button
-          id="xbuttonallAnother"
-          onClick={() => setShowFavoritesInfoDiv(false)}
-          className="exitButtonRecipe"
-        >
-          <img
-            className="xbtnrecipeAnother"
-            id="xbtnidAnother"
-            src="xmark-solid.svg"
-          />
-        </button>
-        {favoriteArray.map((recipe, index) => (
-          <li key={index}>
-          <p className="recipeInfoTitle">{recipe.title}</p>
-          <p>Servings: {recipe.servings}</p>
-          <p>Ready in: {recipe.readyInMinutes}</p> 
-          <p>Vegetarian: {recipe.vegetarian === true ? "true" : "false"}</p>
-          <p>Vegan: {recipe.vegan === true ? "true" : "false"}</p>
-          
-          <a id="recipelink" href={recipe.sourceUrl} target="_blank">
-            Click here for recipe
-          </a>
-          </li>
-        ))}
+      <img id="seedling" src="seedling-solid.svg" alt="" />
+      <h1 className="title">Not Your Mothers Recipes</h1>
+      <div className="navLinks">
+        <Link to={"/"}>
+          <img className="houseIcon" src="house-solid.svg" alt="" />
+        </Link>
+        <Link className="link" to={"/favorites"}>
+          <span className="favButton">&hearts;</span>
+        </Link>
       </div>
     </div>
   );
